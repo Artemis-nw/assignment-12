@@ -40,8 +40,6 @@ def save_energy_report(room_totals, power_hogs):
         file2.write("---------------------\n")
         for appliance, usage in power_hogs:
             file2.write(f"{appliance} ({usage:.1f} kWh)\n")
-
-if __name__ == "__main__":
-    room_totals, power_hogs = audit_energy_usage('energy_log.txt')
-    save_energy_report(room_totals, power_hogs)
+room_totals, power_hogs = audit_energy_usage('energy_log.txt')
+save_energy_report(room_totals, power_hogs)
 
