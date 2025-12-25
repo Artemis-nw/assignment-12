@@ -1,6 +1,6 @@
 def audit_energy_usage(filename):
     room_totals = {}
-    power_hogs = []
+    power_hogs = {}
     
     with open(filename, 'r') as file:
         for line in file:
@@ -44,3 +44,4 @@ def save_energy_report(room_totals, power_hogs):
 if __name__ == "__main__":
     room_totals, power_hogs = audit_energy_usage('energy_log.txt')
     save_energy_report(room_totals, power_hogs)
+
